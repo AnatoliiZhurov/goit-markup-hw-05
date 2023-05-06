@@ -163,7 +163,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  color: var(--color-ocean);
+  color: var(--color-navy-blue);
   display: block;
   padding: 24px 0;
   transition: color var(--anim-fast);
@@ -187,6 +187,9 @@ body {
   transition: opacity var(--anim-fast);
 }
 
+.active {
+  color: var(--color-ocean);
+}
 .nav-list-item.active::after {
   opacity: 1;
   background-color: var(--color-ocean);
@@ -639,11 +642,11 @@ body {
 .modal-close-btn:focus {
   background-color: var(--color-ocean);
   border: none;
-  transition: fill var(--anim-fast);
 }
 
 .modal-icon {
   fill: var(--color-navy-blue);
+  transition: fill var(--anim-fast);
 }
 .modal-close-btn:hover .modal-icon,
 .modal-close-btn:focus .modal-icon {
