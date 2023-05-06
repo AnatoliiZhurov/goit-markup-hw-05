@@ -407,7 +407,7 @@ body {
   border-style: solid;
   border-color: currentColor;
   border-radius: 4px;
-  transition: color var(--anim-fast);
+  transition: border-color var(--anim-fast), color var(--anim-fast);
 }
 
 .customers-icon {
@@ -598,11 +598,13 @@ body {
   left: calc(50%);
   transform: translateX(-50%) translateY(-50%) scale(1);
   width: 408px;
-  min-height: 584px;
-  background-color: var(--color-white);
+  min-height: 576px;
+  background-color: var(--color-dairy);
   border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--anim-fast);
 }
 
 .backdrop.is-hidden .modal {
@@ -626,8 +628,23 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0;
+
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--color-ocean);
+  border: none;
 }
 
 .modal-icon {
   fill: var(--color-navy-blue);
+}
+.modal-close-btn:hover .modal-icon,
+.modal-close-btn:focus .modal-icon {
+  fill: var(--color-white);
 }
